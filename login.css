@@ -51,3 +51,13 @@ body{
     width:80vh;
     clip-path:polygon(0 0,100% 0,25% 50%,50% 100%,100% 35%,0 100%)
 }
+.primary{
+    background-color:black;
+}
+td{
+    background-color:lightblue;
+    color: white;
+    font-style:bold;
+    border:3px solid black;
+    height: 60px;
+}
