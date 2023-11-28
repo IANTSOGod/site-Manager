@@ -207,12 +207,13 @@ if(data!=NULL){
             fclose(file3);
             fclose(file2);
 
-            char cmd[256];
-            sscanf(cmd,"sudo mv /home/mit/C/%s.conf /etc/apache2/sites-available/",sitename);
+            char cmd[1000];
+            char cmd1[1000];
+            snprintf(cmd,sizeof(cmd),"sudo mv /home/mit/C/%s.conf /etc/apache2/sites-available/",sitename);
             system(cmd);
             system("sudo mv /home/mit/C/hosts /etc/hosts");
-            sscanf(cmd,"a2ensite %s",sitename);
-            system(cmd);
+            snprintf(cmd1,sizeof(cmd1),"a2ensite %s",sitename);
+            system(cmd1);
         }
 
         else if(strcmp(entry1,"username")==0 && strcmp(entry2,"password")==0){
